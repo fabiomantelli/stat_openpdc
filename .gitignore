@@ -1,0 +1,10 @@
+node_modules/
+*.xlsx
+yarn.lock
+.vscode
+
+yarn-debug.log*
+yarn-error.log*
+
+.eslintrc.js
+.DS_Store
