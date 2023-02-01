@@ -5,12 +5,12 @@ const HOST = '0.0.0.0'
 
 const app = express()
 
-const stastRoute = require('./src/routes/stat.routes')
+const statRoute = require('./src/routes/stat.routes')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-app.use('/api/', stastRoute)
+app.use('/api/', statRoute)
 
 app.get('/', (req, res) => {
     res.send('Hello, App!')
