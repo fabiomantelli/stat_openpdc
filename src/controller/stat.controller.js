@@ -119,7 +119,7 @@ exports.listStat = async (req, res) => {
   }
 
   // Save the workbook to an xlsx file
-  workbook.xlsx.writeFile(`${date}_${system}.xlsx`).then(() => {
+  workbook.xlsx.writeFile(`./data/${date}_${system}.xlsx`).then(() => {
     console.log(`[FINISH] File ${date}_${system} saved.`);
   });
 
