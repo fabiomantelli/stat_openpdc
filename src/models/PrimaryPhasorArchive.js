@@ -9,13 +9,27 @@ const ppa = {
     { id: '25', pmu: 'ufjf', statusFlags: 662 },
   ],
   onsSystem: [
-    { id: '11704', pmu: 'CEAUT_500_PM_01', statusFlags: 3902 },
-    { id: '11714', pmu: 'CEPED_500_PM_01', statusFlags: 4036 },
-    { id: '11423', pmu: 'RSNSR_525_PM_04', statusFlags: 1543 },
-    { id: '14202', pmu: 'PIQND_500_PM_07', statusFlags: 9488 },
-    { id: '10709', pmu: 'BAPOT_500_PM_03', statusFlags: 3762 },
-    { id: '10707', pmu: 'PATC_500_PM_07', statusFlags: 3681 },
-    { id: '10701', pmu: 'SCCNO_525_PM_03', statusFlags: 3586 },
+    {
+      id: '11704', pmu: 'CEAUT_500_PM_01', statusFlags: 3902, agent: 'ARGO',
+    },
+    {
+      id: '11714', pmu: 'CEPED_500_PM_01', statusFlags: 4036, agent: 'ARGO',
+    },
+    {
+      id: '11423', pmu: 'RSNSR_525_PM_04', statusFlags: 1543, agent: 'ELETROSUL',
+    },
+    {
+      id: '14202', pmu: 'PIQND_500_PM_07', statusFlags: 9488, agent: 'RIALMA',
+    },
+    {
+      id: '10709', pmu: 'BAPOT_500_PM_03', statusFlags: 3762, agent: 'TBE',
+    },
+    {
+      id: '10707', pmu: 'PATC_500_PM_07', statusFlags: 3681, agent: 'TBE',
+    },
+    {
+      id: '10701', pmu: 'SCCNO_525_PM_03', statusFlags: 3586, agent: 'TBE',
+    },
   ],
 };
 

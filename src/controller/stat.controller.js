@@ -17,6 +17,7 @@ exports.listStat = async (req, res) => {
 
   startPerformanceTime = performance.now() / 1000;
   const flags = filterValues(statistic);
+  console.log(`flags: ${JSON.stringify(flags)}`);
   endPerformanceTime = performance.now() / 1000;
   timeTaken = calculateTime(startPerformanceTime, endPerformanceTime);
   console.log(`Time taken to filter and remove 0 and 64 values: ${timeTaken} seconds.`);
@@ -133,7 +134,9 @@ exports.listStat = async (req, res) => {
 };
 
 function filterValues(data) {
-  return data.map((pmu, index) => pmu.filter((item) => !(item.Value === 0 || item.Value === 64)));
+  return data.map(
+    (pmu, index) => pmu.filter((item) => !(item.Value === 557056 || item.Value === 0 || item.Value === 64)),
+  );
 }
 
 function calculateTime(startTime, endTime) {
@@ -141,7 +144,6 @@ function calculateTime(startTime, endTime) {
 }
 
 const cache = new Map();
-
 async function getStatisticFromOpenPDC(ppa, system, startTime, endTime) {
   const serverMap = {
     brazilianSystem: '150.162.19.214',
